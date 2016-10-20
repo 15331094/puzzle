@@ -27,12 +27,15 @@ var strBg = new Array(
 		'rgba(0, 0, 0, 0) url("panda.jpg") repeat scroll 0px -264px / auto padding-box border-box',
 		'rgba(0, 0, 0, 0) url("panda.jpg") repeat scroll -88px -264px / auto padding-box border-box',
 		'rgba(0, 0, 0, 0) url("panda.jpg") repeat scroll -176px -264px / auto padding-box border-box',
-		'rgba(0, 0, 0, 0) url("panda.jpg") repeat scroll -264px -264px / auto padding-box border-box');
+		'rgba(0, 0, 0, 0) url("panda.jpg") repeat scroll -264px -264px / auto padding-box border-box',
+		'rgba(0, 0, 0, 0) url("") repeat scroll 0px 0px / auto padding-box border-box');
 
 
 function reset() {
 	for(var i = 0; i < 16; i++) {
+		whiteSquare[i] = false;
 		document.getElementById(square[i]).style.background = strBg[i];
+		document.getElementById(square[i]).style.transition = "background 0.5s";
 		/*document.getElementById(square[i]).style.transition = "background 0.1s";*/
 	}
 }
@@ -56,13 +59,13 @@ function shuffle() {
             var bgA = window.getComputedStyle(a, "").background;
             var bgB = window.getComputedStyle(b, "").background;
             var bgC = window.getComputedStyle(c, "").background;
-            temp = bgA;
+            var temp = bgA;
 
             a.style.background = bgB;
             b.style.background = bgC;
             c.style.background = temp;
 
-            t = whiteSquare[ri[i]];
+            var t = whiteSquare[ri[i]];
             whiteSquare[ri[i]] = whiteSquare[ri[i + 1]];
             whiteSquare[ri[i + 1]] = whiteSquare[ri[i + 2]];
             whiteSquare[ri[i + 2]] = t;
@@ -71,18 +74,21 @@ function shuffle() {
 }
 
 function upsetOrder() {
+	
 	reset();
 
-	for(var i = 0; i < 16; i++) whiteSquare[i] = false;
+	//for(var i = 0; i < 16; i++) whiteSquare[i] = false;
 	point = Math.ceil(Math.random()*4);
 	switch(point) {
-		case 1: document.getElementById('one-one').style.background = 'url("")'; whiteSquare[0] = true; break;
-		case 2: document.getElementById('one-four').style.background = 'url("")'; whiteSquare[3] = true; break;
-		case 3: document.getElementById('four-one').style.background = 'url("")'; whiteSquare[12] = true; break;
-		case 4: document.getElementById('four-four').style.background = 'url("")'; whiteSquare[15] = true; break;
+		case 1: document.getElementById('one-one').style.background = strBg[16]; whiteSquare[0] = true; break;
+		case 2: document.getElementById('one-four').style.background = strBg[16]; whiteSquare[3] = true; break;
+		case 3: document.getElementById('four-one').style.background = strBg[16]; whiteSquare[12] = true; break;
+		case 4: document.getElementById('four-four').style.background = strBg[16]; whiteSquare[15] = true; break;
 	}
 	//alert(point + " " + whiteSquare);
+	for(var i = 0; i < 16; i++) document.getElementById(square[i]).style.transition = "background 0s";
 	shuffle();
+	
 }
 
 function judge() {
@@ -111,7 +117,7 @@ function change(num) {
 		click.style.background = blankBaground;
 		blank.style.background = clickBackground;
 		click.style.transition="background 0.8s";
-		blank.style.transition="background 0.8s"
+		blank.style.transition="background 0.8s";
 
 		whiteSquare[whiteBlank] = false;
 		whiteSquare[num] = true;
