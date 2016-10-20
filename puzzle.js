@@ -34,8 +34,8 @@ var strBg = new Array(
 function reset() {
 	for(var i = 0; i < 16; i++) {
 		whiteSquare[i] = false;
+		//document.getElementById(square[i]).style.transition = "background 0.5s";
 		document.getElementById(square[i]).style.background = strBg[i];
-		document.getElementById(square[i]).style.transition = "background 0.5s";
 		/*document.getElementById(square[i]).style.transition = "background 0.1s";*/
 	}
 }
@@ -88,6 +88,7 @@ function upsetOrder() {
 	//alert(point + " " + whiteSquare);
 	for(var i = 0; i < 16; i++) document.getElementById(square[i]).style.transition = "background 0s";
 	shuffle();
+	for(var i = 0; i < 16; i++) document.getElementById(square[i]).style.transition = "background 1s";
 	
 }
 
@@ -114,10 +115,11 @@ function change(num) {
 		&& Math.abs(click.offsetLeft - blank.offsetLeft) <= 95) 
 		|| (click.offsetLeft == blank.offsetLeft && Math.abs(click.offsetTop - blank.offsetTop) >= 85
 			&& Math.abs(click.offsetTop - blank.offsetTop) <= 95)) {
-		click.style.background = blankBaground;
-		blank.style.background = clickBackground;
+
 		click.style.transition="background 0.8s";
 		blank.style.transition="background 0.8s";
+		click.style.background = blankBaground;
+		blank.style.background = clickBackground;		
 
 		whiteSquare[whiteBlank] = false;
 		whiteSquare[num] = true;
