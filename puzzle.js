@@ -9,25 +9,25 @@ var square = new Array("one-one","one-two","one-three","one-four",
 var whiteSquare = new Array(16);
 
 var strBg = new Array(
-		'rgba(0, 0, 0, 0) url("http://my.ss.sysu.edu.cn/wiki/download/attachments/467435525/panda.jpg?version=2&modificationDate=1447574961000") repeat scroll 0px 0px / auto padding-box border-box',
-		'rgba(0, 0, 0, 0) url("http://my.ss.sysu.edu.cn/wiki/download/attachments/467435525/panda.jpg?version=2&modificationDate=1447574961000") repeat scroll -88px 0px / auto padding-box border-box',
-		'rgba(0, 0, 0, 0) url("http://my.ss.sysu.edu.cn/wiki/download/attachments/467435525/panda.jpg?version=2&modificationDate=1447574961000") repeat scroll -176px 0px / auto padding-box border-box',
-		'rgba(0, 0, 0, 0) url("http://my.ss.sysu.edu.cn/wiki/download/attachments/467435525/panda.jpg?version=2&modificationDate=1447574961000") repeat scroll -264px 0px / auto padding-box border-box',
+		'rgba(0, 0, 0, 0) url("panda.jpg") repeat scroll 0px 0px / auto padding-box border-box',
+		'rgba(0, 0, 0, 0) url("panda.jpg") repeat scroll -88px 0px / auto padding-box border-box',
+		'rgba(0, 0, 0, 0) url("panda.jpg") repeat scroll -176px 0px / auto padding-box border-box',
+		'rgba(0, 0, 0, 0) url("panda.jpg") repeat scroll -264px 0px / auto padding-box border-box',
 
-		'rgba(0, 0, 0, 0) url("http://my.ss.sysu.edu.cn/wiki/download/attachments/467435525/panda.jpg?version=2&modificationDate=1447574961000") repeat scroll 0px -88px / auto padding-box border-box',
-		'rgba(0, 0, 0, 0) url("http://my.ss.sysu.edu.cn/wiki/download/attachments/467435525/panda.jpg?version=2&modificationDate=1447574961000") repeat scroll -88px -88px / auto padding-box border-box',
-		'rgba(0, 0, 0, 0) url("http://my.ss.sysu.edu.cn/wiki/download/attachments/467435525/panda.jpg?version=2&modificationDate=1447574961000") repeat scroll -176px -88px / auto padding-box border-box',
-		'rgba(0, 0, 0, 0) url("http://my.ss.sysu.edu.cn/wiki/download/attachments/467435525/panda.jpg?version=2&modificationDate=1447574961000") repeat scroll -264px -88px / auto padding-box border-box',
+		'rgba(0, 0, 0, 0) url("panda.jpg") repeat scroll 0px -88px / auto padding-box border-box',
+		'rgba(0, 0, 0, 0) url("panda.jpg") repeat scroll -88px -88px / auto padding-box border-box',
+		'rgba(0, 0, 0, 0) url("panda.jpg") repeat scroll -176px -88px / auto padding-box border-box',
+		'rgba(0, 0, 0, 0) url("panda.jpg") repeat scroll -264px -88px / auto padding-box border-box',
 
-		'rgba(0, 0, 0, 0) url("http://my.ss.sysu.edu.cn/wiki/download/attachments/467435525/panda.jpg?version=2&modificationDate=1447574961000") repeat scroll 0px -176px / auto padding-box border-box',
-		'rgba(0, 0, 0, 0) url("http://my.ss.sysu.edu.cn/wiki/download/attachments/467435525/panda.jpg?version=2&modificationDate=1447574961000") repeat scroll -88px -176px / auto padding-box border-box',
-		'rgba(0, 0, 0, 0) url("http://my.ss.sysu.edu.cn/wiki/download/attachments/467435525/panda.jpg?version=2&modificationDate=1447574961000") repeat scroll -176px -176px / auto padding-box border-box',
-		'rgba(0, 0, 0, 0) url("http://my.ss.sysu.edu.cn/wiki/download/attachments/467435525/panda.jpg?version=2&modificationDate=1447574961000") repeat scroll -264px -176px / auto padding-box border-box',
+		'rgba(0, 0, 0, 0) url("panda.jpg") repeat scroll 0px -176px / auto padding-box border-box',
+		'rgba(0, 0, 0, 0) url("panda.jpg") repeat scroll -88px -176px / auto padding-box border-box',
+		'rgba(0, 0, 0, 0) url("panda.jpg") repeat scroll -176px -176px / auto padding-box border-box',
+		'rgba(0, 0, 0, 0) url("panda.jpg") repeat scroll -264px -176px / auto padding-box border-box',
 
-		'rgba(0, 0, 0, 0) url("http://my.ss.sysu.edu.cn/wiki/download/attachments/467435525/panda.jpg?version=2&modificationDate=1447574961000") repeat scroll 0px -264px / auto padding-box border-box',
-		'rgba(0, 0, 0, 0) url("http://my.ss.sysu.edu.cn/wiki/download/attachments/467435525/panda.jpg?version=2&modificationDate=1447574961000") repeat scroll -88px -264px / auto padding-box border-box',
-		'rgba(0, 0, 0, 0) url("http://my.ss.sysu.edu.cn/wiki/download/attachments/467435525/panda.jpg?version=2&modificationDate=1447574961000") repeat scroll -176px -264px / auto padding-box border-box',
-		'rgba(0, 0, 0, 0) url("http://my.ss.sysu.edu.cn/wiki/download/attachments/467435525/panda.jpg?version=2&modificationDate=1447574961000") repeat scroll -264px -264px / auto padding-box border-box');
+		'rgba(0, 0, 0, 0) url("panda.jpg") repeat scroll 0px -264px / auto padding-box border-box',
+		'rgba(0, 0, 0, 0) url("panda.jpg") repeat scroll -88px -264px / auto padding-box border-box',
+		'rgba(0, 0, 0, 0) url("panda.jpg") repeat scroll -176px -264px / auto padding-box border-box',
+		'rgba(0, 0, 0, 0) url("panda.jpg") repeat scroll -264px -264px / auto padding-box border-box');
 
 
 function reset() {
