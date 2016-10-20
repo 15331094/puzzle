@@ -42,7 +42,7 @@ button:hover {
     border-width: 1px;
     border-color: gray;
     border-style: solid;   
-    transform: all 0.1s;
+    /*transform: all 0.1s;*/
 }
 
 div.square:hover {
