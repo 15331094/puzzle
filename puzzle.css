@@ -1,5 +1,6 @@
 body {
 	background-image: url("background.jpg");
+	text-align: center;
 }
 
 #whole-page {
@@ -37,9 +38,9 @@ body {
 }
 
 button {
-    position: absolute;
+  /*  position: absolute;
     top: 480px;
-    left: 46%;
+    left: 46%;*/
     background-color: blue;
     font-size: 20px;
     color: white;
