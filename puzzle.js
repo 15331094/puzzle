@@ -28,16 +28,18 @@ var strBg = new Array(
 		'rgba(0, 0, 0, 0) url("panda.jpg") repeat scroll -88px -264px / auto padding-box border-box',
 		'rgba(0, 0, 0, 0) url("panda.jpg") repeat scroll -176px -264px / auto padding-box border-box',
 		'rgba(0, 0, 0, 0) url("panda.jpg") repeat scroll -264px -264px / auto padding-box border-box',
-		'rgba(0, 0, 0, 0) url("") repeat scroll 0px 0px / auto padding-box border-box');
+		'rgba(1, 1, 1, 1) url("") repeat scroll 0px 0px / auto padding-box border-box');
 
 
 function reset() {
+	//for(var i = 0; i < 16; i++) document.getElementById(square[i]).style.transition = "background 0s";
+
+	
 	for(var i = 0; i < 16; i++) {
 		whiteSquare[i] = false;
-		//document.getElementById(square[i]).style.transition = "background 0.5s";
 		document.getElementById(square[i]).style.background = strBg[i];
-		/*document.getElementById(square[i]).style.transition = "background 0.1s";*/
 	}
+	//for(var i = 0; i < 16; i++) document.getElementById(square[i]).style.transition = "background 1s";
 }
 
 window.onload = reset;
@@ -88,18 +90,41 @@ function upsetOrder() {
 	//alert(point + " " + whiteSquare);
 	for(var i = 0; i < 16; i++) document.getElementById(square[i]).style.transition = "background 0s";
 	shuffle();
-	for(var i = 0; i < 16; i++) document.getElementById(square[i]).style.transition = "background 1s";
+	for(var i = 0; i < 16; i++) document.getElementById(square[i]).style.transition = "background 0.05s";
 	
+
+
+	var pre = document.getElementById('pre');
+	var pic = document.getElementById('whole-pic');
+
+	pre.style.transition = "all 0s";
+	pic.style.transition = "all 0s";
+
+	pic.style.left = "-300px";
+
+	pre.style.left = "800px";
+
+    
+    pre.style.transition = "all 1s";
+	pic.style.transition = "all 1s";
+
 }
 
 function judge() {
+	var blank_num;
 	for(var i = 0; i < 16; i++) {
-		if(window.getComputedStyle(document.getElementById(square[i]), "").background != strBg[i]) return false;
+		if(whiteSquare[i] == true) blank_num = i; break;
+	}
+	for(var i = 0; i < 16; i++) {
+		if(i == blank_num && window.getComputedStyle(document.getElementById(square[i]), "").background != strBg[16]) return false; 
+		if(i != blank_num && window.getComputedStyle(document.getElementById(square[i]), "").background != strBg[i]) return false;
 	}
 	return true;
 }
 
 function change(num) {	
+	/*for(var i = 0; i < 16; i++) document.getElementById(square[i]).style.transition = "background 0s";*/
+
 	var click = document.getElementById(square[num]);
 	var clickBackground = window.getComputedStyle(click, "").background;
 
@@ -116,14 +141,18 @@ function change(num) {
 		|| (click.offsetLeft == blank.offsetLeft && Math.abs(click.offsetTop - blank.offsetTop) >= 85
 			&& Math.abs(click.offsetTop - blank.offsetTop) <= 95)) {
 
-		click.style.transition="background 0.8s";
-		blank.style.transition="background 0.8s";
+		click.style.transition="background 0s";
+		blank.style.transition="background 0s";
 		click.style.background = blankBaground;
-		blank.style.background = clickBackground;		
+		blank.style.background = clickBackground;	
+		click.style.transition="background 0.05s";
+		blank.style.transition="background 0.05s";	
 
 		whiteSquare[whiteBlank] = false;
 		whiteSquare[num] = true;
 	}
+
+	/*for(var i = 0; i < 16; i++) document.getElementById(square[i]).style.transition = "background 1s";*/
 
 	if(judge()) {
 		alert("You Win!");
