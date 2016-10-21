@@ -52,7 +52,10 @@ button {
     font-size: 20px;
     color: white;
     padding: 10px 15px 10px 15px;
-    transform: all 1s;
+    transition: all 1s;
+    -moz-transition: all 1s; /* Firefox 4 */
+	-webkit-transition: all 1s; /* Safari 和 Chrome */
+	-o-transition: all 1s; /* Opera */
     box-shadow: 5px 5px 10px #888888;
 }
 
@@ -74,7 +77,10 @@ button:hover {
     border-width: 1px;
     border-color: gray;
     border-style: solid;   
-    /*transform: all 0.1s;*/
+    transition: all 0s;
+    -moz-transition: all 0s; /* Firefox 4 */
+	-webkit-transition: all 0s; /* Safari 和 Chrome */
+	-o-transition: all 0s; /* Opera */
 }
 
 div.square:hover {
