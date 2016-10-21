@@ -28,7 +28,7 @@ var strBg = new Array(
 		'rgba(0, 0, 0, 0) url("panda.jpg") repeat scroll -88px -264px / auto padding-box border-box',
 		'rgba(0, 0, 0, 0) url("panda.jpg") repeat scroll -176px -264px / auto padding-box border-box',
 		'rgba(0, 0, 0, 0) url("panda.jpg") repeat scroll -264px -264px / auto padding-box border-box',
-		'rgba(1, 1, 1, 1) url("") repeat scroll 0px 0px / auto padding-box border-box');
+		'rgba(0, 0, 212, 0.1) url("") repeat scroll 0px 0px / auto padding-box border-box');
 
 
 function reset() {
