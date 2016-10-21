@@ -80,7 +80,7 @@ function upsetOrder() {
 	reset();
 
 	//for(var i = 0; i < 16; i++) whiteSquare[i] = false;
-	point = Math.ceil(Math.random()*4);
+	point = 4;
 	switch(point) {
 		case 1: document.getElementById('one-one').style.background = strBg[16]; whiteSquare[0] = true; break;
 		case 2: document.getElementById('one-four').style.background = strBg[16]; whiteSquare[3] = true; break;
