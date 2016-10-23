@@ -1,3 +1,4 @@
+
 body {
 	text-align: center;
 }
@@ -45,9 +46,6 @@ body {
 }
 
 button {
-  /*  position: absolute;
-    top: 480px;
-    left: 46%;*/
     background-color: blue;
     font-size: 20px;
     color: white;
@@ -62,15 +60,8 @@ button {
 button:hover {
     transform: scale(1.05);
 }
-/*
-.line {
-    width: 100%;
-    height: 90px;
-    float: top;
-    background-color: green;
-}
-*/
-.square {
+
+.oneOne {
     width: 88px;
     height: 88px;
     float: left;
@@ -79,11 +70,243 @@ button:hover {
     border-style: solid;   
     transition: all 0s;
     -moz-transition: all 0s; /* Firefox 4 */
-	-webkit-transition: all 0s; /* Safari 和 Chrome */
-	-o-transition: all 0s; /* Opera */
+    -webkit-transition: all 0s; /* Safari 和 Chrome */
+    -o-transition: all 0s; /* Opera */ 
+    background: url("panda.jpg") 0px 0px;
 }
 
-div.square:hover {
+.oneTwo {
+    width: 88px;
+    height: 88px;
+    float: left;
+    border-width: 1px;
+    border-color: gray;
+    border-style: solid;   
+    transition: all 0s;
+    -moz-transition: all 0s; /* Firefox 4 */
+    -webkit-transition: all 0s; /* Safari 和 Chrome */
+    -o-transition: all 0s; /* Opera */ 
+    background: url("panda.jpg") -88px 0px;
+}
+
+.oneThree {
+    width: 88px;
+    height: 88px;
+    float: left;
+    border-width: 1px;
+    border-color: gray;
+    border-style: solid;   
+    transition: all 0s;
+    -moz-transition: all 0s; /* Firefox 4 */
+    -webkit-transition: all 0s; /* Safari 和 Chrome */
+    -o-transition: all 0s; /* Opera */ 
+    background: url("panda.jpg") -176px 0px;
+}
+
+.oneFour {
+    width: 88px;
+    height: 88px;
+    float: left;
+    border-width: 1px;
+    border-color: gray;
+    border-style: solid;   
+    transition: all 0s;
+    -moz-transition: all 0s; /* Firefox 4 */
+    -webkit-transition: all 0s; /* Safari 和 Chrome */
+    -o-transition: all 0s; /* Opera */ 
+    background: url("panda.jpg") -264px 0px;
+}
+
+.twoOne {
+    width: 88px;
+    height: 88px;
+    float: left;
+    border-width: 1px;
+    border-color: gray;
+    border-style: solid;   
+    transition: all 0s;
+    -moz-transition: all 0s; /* Firefox 4 */
+    -webkit-transition: all 0s; /* Safari 和 Chrome */
+    -o-transition: all 0s; /* Opera */ 
+    background: url("panda.jpg") 0px -88px;
+}
+
+.twoTwo {
+    width: 88px;
+    height: 88px;
+    float: left;
+    border-width: 1px;
+    border-color: gray;
+    border-style: solid;   
+    transition: all 0s;
+    -moz-transition: all 0s; /* Firefox 4 */
+    -webkit-transition: all 0s; /* Safari 和 Chrome */
+    -o-transition: all 0s; /* Opera */ 
+    background: url("panda.jpg") -88px -88px;
+}
+
+.twoThree {
+    width: 88px;
+    height: 88px;
+    float: left;
+    border-width: 1px;
+    border-color: gray;
+    border-style: solid;   
+    transition: all 0s;
+    -moz-transition: all 0s; /* Firefox 4 */
+    -webkit-transition: all 0s; /* Safari 和 Chrome */
+    -o-transition: all 0s; /* Opera */ 
+    background: url("panda.jpg") -176px -88px;
+}
+
+.twoFour {
+    width: 88px;
+    height: 88px;
+    float: left;
+    border-width: 1px;
+    border-color: gray;
+    border-style: solid;   
+    transition: all 0s;
+    -moz-transition: all 0s; /* Firefox 4 */
+    -webkit-transition: all 0s; /* Safari 和 Chrome */
+    -o-transition: all 0s; /* Opera */ 
+    background: url("panda.jpg") -264px -88px;
+}
+
+.threeOne {
+    width: 88px;
+    height: 88px;
+    float: left;
+    border-width: 1px;
+    border-color: gray;
+    border-style: solid;   
+    transition: all 0s;
+    -moz-transition: all 0s; /* Firefox 4 */
+    -webkit-transition: all 0s; /* Safari 和 Chrome */
+    -o-transition: all 0s; /* Opera */ 
+    background: url("panda.jpg") 0px -176px;
+}
+
+.threeTwo {
+    width: 88px;
+    height: 88px;
+    float: left;
+    border-width: 1px;
+    border-color: gray;
+    border-style: solid;   
+    transition: all 0s;
+    -moz-transition: all 0s; /* Firefox 4 */
+    -webkit-transition: all 0s; /* Safari 和 Chrome */
+    -o-transition: all 0s; /* Opera */ 
+    background: url("panda.jpg") -88px -176px;
+}
+
+.threeThree {
+    width: 88px;
+    height: 88px;
+    float: left;
+    border-width: 1px;
+    border-color: gray;
+    border-style: solid;   
+    transition: all 0s;
+    -moz-transition: all 0s; /* Firefox 4 */
+    -webkit-transition: all 0s; /* Safari 和 Chrome */
+    -o-transition: all 0s; /* Opera */ 
+    background: url("panda.jpg") -176px -176px;
+}
+
+.threeFour {
+    width: 88px;
+    height: 88px;
+    float: left;
+    border-width: 1px;
+    border-color: gray;
+    border-style: solid;   
+    transition: all 0s;
+    -moz-transition: all 0s; /* Firefox 4 */
+    -webkit-transition: all 0s; /* Safari 和 Chrome */
+    -o-transition: all 0s; /* Opera */ 
+    background: url("panda.jpg") -264px -176px;
+}
+
+.fourOne {
+    width: 88px;
+    height: 88px;
+    float: left;
+    border-width: 1px;
+    border-color: gray;
+    border-style: solid;   
+    transition: all 0s;
+    -moz-transition: all 0s; /* Firefox 4 */
+    -webkit-transition: all 0s; /* Safari 和 Chrome */
+    -o-transition: all 0s; /* Opera */ 
+    background: url("panda.jpg") 0px -264px;
+}
+
+.fourTwo {
+    width: 88px;
+    height: 88px;
+    float: left;
+    border-width: 1px;
+    border-color: gray;
+    border-style: solid;   
+    transition: all 0s;
+    -moz-transition: all 0s; /* Firefox 4 */
+    -webkit-transition: all 0s; /* Safari 和 Chrome */
+    -o-transition: all 0s; /* Opera */ 
+    background: url("panda.jpg") -88px -264px;
+}
+
+.fourThree {
+    width: 88px;
+    height: 88px;
+    float: left;
+    border-width: 1px;
+    border-color: gray;
+    border-style: solid;   
+    transition: all 0s;
+    -moz-transition: all 0s; /* Firefox 4 */
+    -webkit-transition: all 0s; /* Safari 和 Chrome */
+    -o-transition: all 0s; /* Opera */ 
+    background: url("panda.jpg") -176px -264px;
+}
+
+.fourFour {
+    width: 88px;
+    height: 88px;
+    float: left;
+    border-width: 1px;
+    border-color: gray;
+    border-style: solid;   
+    transition: all 0s;
+    -moz-transition: all 0s; /* Firefox 4 */
+    -webkit-transition: all 0s; /* Safari 和 Chrome */
+    -o-transition: all 0s; /* Opera */ 
+    background: url("panda.jpg") -264px -264px;
+}
+
+.blank-square {
+    width: 88px;
+    height: 88px;
+    float: left;
+    border-width: 1px;
+    border-color: gray;
+    border-style: solid;   
+    transition: all 0s;
+    -moz-transition: all 0s; /* Firefox 4 */
+    -webkit-transition: all 0s; /* Safari 和 Chrome */
+    -o-transition: all 0s; /* Opera */ 
+    background: rgba(0, 0, 212, 0.1) url("") 0px 0px;
+}
+
+div.oneOne:hover, div.oneTwo:hover, div.oneThree:hover, div.oneFour:hover, 
+div.twoOne:hover, div.twoTwo:hover, div.twoThree:hover, div.twoFour:hover, 
+div.threeOne:hover, div.threeTwo:hover, div.threeThree:hover, div.threeFour:hover, 
+div.fourOne:hover, div.fourTwo:hover, div.fourThree:hover, div.fourFour:hover, div.blank-square:hover {
     transform: scale(1.08);
 }
+
+
+
+
 
