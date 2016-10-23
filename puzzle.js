@@ -1,48 +1,24 @@
 
 var point;
 
-var square = new Array("one-one","one-two","one-three","one-four",
+var squareID = new Array("one-one","one-two","one-three","one-four",
 	"two-one","two-two","two-three","two-four",
 	"three-one","three-two","three-three","three-four",
 	"four-one","four-two","four-three","four-four");
 
-var whiteSquare = new Array(16);
+var squareClass = new Array("oneOne","oneTwo","oneThree","oneFour",
+	"twoOne","twoTwo","twoThree","twoFour",
+	"threeOne","threeTwo","threeThree","threeFour",
+	"fourOne","fourTwo","fourThree","fourFour","blank-square");
 
-var strBg = new Array(
-		'rgba(0, 0, 0, 0) url("panda.jpg") repeat scroll 0px 0px / auto padding-box border-box',
-		'rgba(0, 0, 0, 0) url("panda.jpg") repeat scroll -88px 0px / auto padding-box border-box',
-		'rgba(0, 0, 0, 0) url("panda.jpg") repeat scroll -176px 0px / auto padding-box border-box',
-		'rgba(0, 0, 0, 0) url("panda.jpg") repeat scroll -264px 0px / auto padding-box border-box',
+var white = new Array(16);
 
-		'rgba(0, 0, 0, 0) url("panda.jpg") repeat scroll 0px -88px / auto padding-box border-box',
-		'rgba(0, 0, 0, 0) url("panda.jpg") repeat scroll -88px -88px / auto padding-box border-box',
-		'rgba(0, 0, 0, 0) url("panda.jpg") repeat scroll -176px -88px / auto padding-box border-box',
-		'rgba(0, 0, 0, 0) url("panda.jpg") repeat scroll -264px -88px / auto padding-box border-box',
-
-		'rgba(0, 0, 0, 0) url("panda.jpg") repeat scroll 0px -176px / auto padding-box border-box',
-		'rgba(0, 0, 0, 0) url("panda.jpg") repeat scroll -88px -176px / auto padding-box border-box',
-		'rgba(0, 0, 0, 0) url("panda.jpg") repeat scroll -176px -176px / auto padding-box border-box',
-		'rgba(0, 0, 0, 0) url("panda.jpg") repeat scroll -264px -176px / auto padding-box border-box',
-
-		'rgba(0, 0, 0, 0) url("panda.jpg") repeat scroll 0px -264px / auto padding-box border-box',
-		'rgba(0, 0, 0, 0) url("panda.jpg") repeat scroll -88px -264px / auto padding-box border-box',
-		'rgba(0, 0, 0, 0) url("panda.jpg") repeat scroll -176px -264px / auto padding-box border-box',
-		'rgba(0, 0, 0, 0) url("panda.jpg") repeat scroll -264px -264px / auto padding-box border-box',
-		'rgba(0, 0, 212, 0.1) url("") repeat scroll 0px 0px / auto padding-box border-box');
-
-
-function reset() {
-	//for(var i = 0; i < 16; i++) document.getElementById(square[i]).style.transition = "background 0s";
-
-	
+function reset() {	
 	for(var i = 0; i < 16; i++) {
-		whiteSquare[i] = false;
-		document.getElementById(square[i]).style.background = strBg[i];
+		white[i] = false;
+		document.getElementById(squareID[i]).className = squareClass[i];
 	}
-	//for(var i = 0; i < 16; i++) document.getElementById(square[i]).style.transition = "background 1s";
 }
-
-window.onload = reset;
 
 function shuffle() {
 	var ri = new Array(15);
@@ -54,43 +30,36 @@ function shuffle() {
 		});
 		for (var i = 0; i < 15; i += 3) {
 
-            var a = document.getElementById(square[ri[i]]);
-            var b = document.getElementById(square[ri[i + 1]]);
-            var c = document.getElementById(square[ri[i + 2]]);
+            var a = document.getElementById(squareID[ri[i]]);
+            var b = document.getElementById(squareID[ri[i + 1]]);
+            var c = document.getElementById(squareID[ri[i + 2]]);
 
-            var bgA = window.getComputedStyle(a, "").background;
-            var bgB = window.getComputedStyle(b, "").background;
-            var bgC = window.getComputedStyle(c, "").background;
-            var temp = bgA;
+            var aClass = a.className;
+            a.className = b.className;
+            b.className = c.className;
+            c.className = aClass;
 
-            a.style.background = bgB;
-            b.style.background = bgC;
-            c.style.background = temp;
-
-            var t = whiteSquare[ri[i]];
-            whiteSquare[ri[i]] = whiteSquare[ri[i + 1]];
-            whiteSquare[ri[i + 1]] = whiteSquare[ri[i + 2]];
-            whiteSquare[ri[i + 2]] = t;
+            var t = white[ri[i]];
+            white[ri[i]] = white[ri[i + 1]];
+            white[ri[i + 1]] = white[ri[i + 2]];
+            white[ri[i + 2]] = t;
 		}
 	}
 }
+
 
 function upsetOrder() {
 	
 	reset();
 
-	//for(var i = 0; i < 16; i++) whiteSquare[i] = false;
+	//for(var i = 0; i < 16; i++) white[i] = false;
 	point = 4;
-	switch(point) {
-		case 1: document.getElementById('one-one').style.background = strBg[16]; whiteSquare[0] = true; break;
-		case 2: document.getElementById('one-four').style.background = strBg[16]; whiteSquare[3] = true; break;
-		case 3: document.getElementById('four-one').style.background = strBg[16]; whiteSquare[12] = true; break;
-		case 4: document.getElementById('four-four').style.background = strBg[16]; whiteSquare[15] = true; break;
-	}
-	//alert(point + " " + whiteSquare);
-	for(var i = 0; i < 16; i++) document.getElementById(square[i]).style.transition = "background 0s";
+	document.getElementById('four-four').className = "blank-square";
+
+	//alert(point + " " + white);
+	for(var i = 0; i < 16; i++) document.getElementById(squareID[i]).style.transition = "background 0s";
 	shuffle();
-	for(var i = 0; i < 16; i++) document.getElementById(square[i]).style.transition = "background 0.05s";
+	for(var i = 0; i < 16; i++) document.getElementById(squareID[i]).style.transition = "background 0.05s";
 	
 
 
@@ -111,30 +80,24 @@ function upsetOrder() {
 }
 
 function judge() {
-	var blank_num;
-	for(var i = 0; i < 16; i++) {
-		if(whiteSquare[i] == true) blank_num = i; break;
+	for(var i = 0; i < 15; i++) {
+		if(document.getElementById(squareID[i]).className != squareClass[i]) return false;
 	}
-	for(var i = 0; i < 16; i++) {
-		if(i == blank_num && window.getComputedStyle(document.getElementById(square[i]), "").background != strBg[16]) return false; 
-		if(i != blank_num && window.getComputedStyle(document.getElementById(square[i]), "").background != strBg[i]) return false;
-	}
+	if(document.getElementById(squareID[15]).className != squareClass[16]) return false; 
 	return true;
 }
 
 function change(num) {	
-	/*for(var i = 0; i < 16; i++) document.getElementById(square[i]).style.transition = "background 0s";*/
 
-	var click = document.getElementById(square[num]);
-	var clickBackground = window.getComputedStyle(click, "").background;
+	var click = document.getElementById(squareID[num]);
 
 	var whiteBlank;
 	for(var i = 0; i < 16; i++) {
-		if(whiteSquare[i] == true) whiteBlank = i;
+		if(document.getElementById(squareID[i]).className == "blank-square") whiteBlank = i;
 	}
 
-	var blank = document.getElementById(square[whiteBlank]);
-	var blankBaground = window.getComputedStyle(blank, "").background;
+	var blank = document.getElementById(squareID[whiteBlank]);
+
 
 	if((click.offsetTop == blank.offsetTop && Math.abs(click.offsetLeft - blank.offsetLeft) >= 85
 		&& Math.abs(click.offsetLeft - blank.offsetLeft) <= 95) 
@@ -143,18 +106,48 @@ function change(num) {
 
 		click.style.transition="background 0s";
 		blank.style.transition="background 0s";
-		click.style.background = blankBaground;
-		blank.style.background = clickBackground;	
+		var tempClass = click.className;
+		click.className = blank.className;
+		blank.className = tempClass;
 		click.style.transition="background 0.05s";
 		blank.style.transition="background 0.05s";	
 
-		whiteSquare[whiteBlank] = false;
-		whiteSquare[num] = true;
+		white[whiteBlank] = false;
+		white[num] = true;
 	}
 
-	/*for(var i = 0; i < 16; i++) document.getElementById(square[i]).style.transition = "background 1s";*/
+	/*for(var i = 0; i < 16; i++) document.getElementById(squareID[i]).style.transition = "background 1s";*/
 
 	if(judge()) {
 		alert("You Win!");
 	}
+}
+
+
+window.onload = function() {
+
+
+	//alert("lala");
+	
+	document.getElementById('restart').onclick = function() {
+		//alert("lala");
+		upsetOrder();
+	}
+
+	document.getElementById('one-one').onclick = function() { change(0); }
+	document.getElementById('one-two').onclick = function() { change(1); }
+	document.getElementById('one-three').onclick = function() { change(2); }
+	document.getElementById('one-four').onclick = function() { change(3); }
+	document.getElementById('two-one').onclick = function() { change(4); }
+	document.getElementById('two-two').onclick = function() { change(5); }
+	document.getElementById('two-three').onclick = function() { change(6); }
+	document.getElementById('two-four').onclick = function() { change(7); }
+	document.getElementById('three-one').onclick = function() { change(8); }
+	document.getElementById('three-two').onclick = function() { change(9); }
+	document.getElementById('three-three').onclick = function() { change(10); }
+	document.getElementById('three-four').onclick = function() { change(11); }
+	document.getElementById('four-one').onclick = function() { change(12); }
+	document.getElementById('four-two').onclick = function() { change(13); }
+	document.getElementById('four-three').onclick = function() { change(14); }
+	document.getElementById('four-four').onclick = function() { change(15); }    	
 }
