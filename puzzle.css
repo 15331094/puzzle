@@ -44,6 +44,7 @@ button {
     font-size: 20px;
     color: white;
     padding: 10px 15px 10px 15px;
+    margin-bottom: 20px;
     transition: all 1s;
     -moz-transition: all 1s; 
 	-webkit-transition: all 1s; 
