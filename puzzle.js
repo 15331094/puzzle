@@ -61,8 +61,8 @@ function upsetOrder() {
 
 	pre.style.transition = "all 0s";
 	pic.style.transition = "all 0s";
-	pic.style.left = "-300px";
-	pre.style.left = "800px";
+	pic.style.left = "-200px";
+	pre.style.left = "900px";
     pre.style.transition = "all 1s";
 	pic.style.transition = "all 1s";
 
