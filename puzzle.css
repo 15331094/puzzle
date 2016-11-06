@@ -32,7 +32,7 @@ body {
 	top: -365px;
 	width: 360px;
 	height: 360px;
-	background: url("pic/panda.jpg");
+	background: url("http://p1.bpimg.com/567571/3d96868cb70b7b6a.jpg");
 	border-style: solid;
 	border-color: gray;
 	border-width: 2px;
@@ -44,7 +44,6 @@ button {
     font-size: 20px;
     color: white;
     padding: 10px 15px 10px 15px;
-    margin-bottom: 20px;
     transition: all 1s;
     -moz-transition: all 1s; 
 	-webkit-transition: all 1s; 
@@ -67,7 +66,7 @@ button:hover {
     -moz-transition: all 0s; 
     -webkit-transition: all 0s; 
     -o-transition: all 0s;  
-    background: url("pic/panda.jpg") 0px 0px;
+    background: url("http://p1.bpimg.com/567571/3d96868cb70b7b6a.jpg") 0px 0px;
 }
 
 .oneTwo {
@@ -81,7 +80,7 @@ button:hover {
     -moz-transition: all 0s; 
     -webkit-transition: all 0s; 
     -o-transition: all 0s;  
-    background: url("pic/panda.jpg") -88px 0px;
+    background: url("http://p1.bpimg.com/567571/3d96868cb70b7b6a.jpg") -88px 0px;
 }
 
 .oneThree {
@@ -95,7 +94,7 @@ button:hover {
     -moz-transition: all 0s; 
     -webkit-transition: all 0s; 
     -o-transition: all 0s;  
-    background: url("pic/panda.jpg") -176px 0px;
+    background: url("http://p1.bpimg.com/567571/3d96868cb70b7b6a.jpg") -176px 0px;
 }
 
 .oneFour {
@@ -109,7 +108,7 @@ button:hover {
     -moz-transition: all 0s; 
     -webkit-transition: all 0s; 
     -o-transition: all 0s;  
-    background: url("pic/panda.jpg") -264px 0px;
+    background: url("http://p1.bpimg.com/567571/3d96868cb70b7b6a.jpg") -264px 0px;
 }
 
 .twoOne {
@@ -123,7 +122,7 @@ button:hover {
     -moz-transition: all 0s; 
     -webkit-transition: all 0s; 
     -o-transition: all 0s;  
-    background: url("pic/panda.jpg") 0px -88px;
+    background: url("http://p1.bpimg.com/567571/3d96868cb70b7b6a.jpg") 0px -88px;
 }
 
 .twoTwo {
@@ -137,7 +136,7 @@ button:hover {
     -moz-transition: all 0s; 
     -webkit-transition: all 0s; 
     -o-transition: all 0s;  
-    background: url("pic/panda.jpg") -88px -88px;
+    background: url("http://p1.bpimg.com/567571/3d96868cb70b7b6a.jpg") -88px -88px;
 }
 
 .twoThree {
@@ -151,7 +150,7 @@ button:hover {
     -moz-transition: all 0s; 
     -webkit-transition: all 0s; 
     -o-transition: all 0s;  
-    background: url("pic/panda.jpg") -176px -88px;
+    background: url("http://p1.bpimg.com/567571/3d96868cb70b7b6a.jpg") -176px -88px;
 }
 
 .twoFour {
@@ -165,7 +164,7 @@ button:hover {
     -moz-transition: all 0s; 
     -webkit-transition: all 0s; 
     -o-transition: all 0s;  
-    background: url("pic/panda.jpg") -264px -88px;
+    background: url("http://p1.bpimg.com/567571/3d96868cb70b7b6a.jpg") -264px -88px;
 }
 
 .threeOne {
@@ -179,7 +178,7 @@ button:hover {
     -moz-transition: all 0s; 
     -webkit-transition: all 0s; 
     -o-transition: all 0s;  
-    background: url("pic/panda.jpg") 0px -176px;
+    background: url("http://p1.bpimg.com/567571/3d96868cb70b7b6a.jpg") 0px -176px;
 }
 
 .threeTwo {
@@ -193,7 +192,7 @@ button:hover {
     -moz-transition: all 0s; 
     -webkit-transition: all 0s; 
     -o-transition: all 0s;  
-    background: url("pic/panda.jpg") -88px -176px;
+    background: url("http://p1.bpimg.com/567571/3d96868cb70b7b6a.jpg") -88px -176px;
 }
 
 .threeThree {
@@ -207,7 +206,7 @@ button:hover {
     -moz-transition: all 0s; 
     -webkit-transition: all 0s; 
     -o-transition: all 0s;  
-    background: url("pic/panda.jpg") -176px -176px;
+    background: url("http://p1.bpimg.com/567571/3d96868cb70b7b6a.jpg") -176px -176px;
 }
 
 .threeFour {
@@ -221,7 +220,7 @@ button:hover {
     -moz-transition: all 0s; 
     -webkit-transition: all 0s; 
     -o-transition: all 0s;  
-    background: url("pic/panda.jpg") -264px -176px;
+    background: url("http://p1.bpimg.com/567571/3d96868cb70b7b6a.jpg") -264px -176px;
 }
 
 .fourOne {
@@ -235,7 +234,7 @@ button:hover {
     -moz-transition: all 0s; 
     -webkit-transition: all 0s; 
     -o-transition: all 0s;  
-    background: url("pic/panda.jpg") 0px -264px;
+    background: url("http://p1.bpimg.com/567571/3d96868cb70b7b6a.jpg") 0px -264px;
 }
 
 .fourTwo {
@@ -249,7 +248,7 @@ button:hover {
     -moz-transition: all 0s; 
     -webkit-transition: all 0s; 
     -o-transition: all 0s;  
-    background: url("pic/panda.jpg") -88px -264px;
+    background: url("http://p1.bpimg.com/567571/3d96868cb70b7b6a.jpg") -88px -264px;
 }
 
 .fourThree {
@@ -263,7 +262,7 @@ button:hover {
     -moz-transition: all 0s; 
     -webkit-transition: all 0s; 
     -o-transition: all 0s;  
-    background: url("pic/panda.jpg") -176px -264px;
+    background: url("http://p1.bpimg.com/567571/3d96868cb70b7b6a.jpg") -176px -264px;
 }
 
 .fourFour {
@@ -277,7 +276,7 @@ button:hover {
     -moz-transition: all 0s; 
     -webkit-transition: all 0s; 
     -o-transition: all 0s;  
-    background: url("pic/panda.jpg") -264px -264px;
+    background: url("http://p1.bpimg.com/567571/3d96868cb70b7b6a.jpg") -264px -264px;
 }
 
 .blank-square {
