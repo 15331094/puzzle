@@ -49,6 +49,7 @@ button {
 	-webkit-transition: all 1s; 
 	-o-transition: all 1s; 
     box-shadow: 5px 5px 10px #888888;
+    margin-bottom: 30px;
 }
 
 button:hover {
